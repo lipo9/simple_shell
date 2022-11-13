@@ -21,3 +21,9 @@
 #Ignore object files
 
 *.o
+
+
+
+#Ignore .vscode folder
+
+.vscode

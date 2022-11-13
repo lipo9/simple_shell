@@ -1,7 +1,7 @@
 #include "sshell.h"
 
 /**
- * _stoi - gets sign and numbers of string
+ * _atoi - gets sign and numbers of string
  * @s: array
  * Return: gets numbers with its sign
  */
@@ -17,18 +17,18 @@ int _atoi(char *s)
 	}
 	for (a = 0; a < cont1; a++)
 	{
-		if (*(s +a) >= '0' && *(s + b) <= '9')
+		if (*(s + a) >= '0' && *(s + a) <= '9')
 			break;
 	}
-	for (b =a; b < cont1; b++)
+	for (b = a; b < cont1; b++)
 	{
-		if (!(*(s + b) >= '0' && *(s + b) <= 'g'))
+		if (!(*(s + b) >= '0' && *(s + b) <= '9'))
 			break;
 	}
 	for (c = 0; c < a; c++)
 	{
 		if (*(s + c) == '-')
-				aux2 = aux2 * (-1);
+			aux2 = aux2 * (-1);
 	}
 	tam = b - a;
 	while (tam >= 1)
@@ -37,6 +37,6 @@ int _atoi(char *s)
 		a++;
 		tam--;
 	}
-	num num * aux2;
+	num = num * aux2;
 	return (num);
 }
